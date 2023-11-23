@@ -74,6 +74,7 @@ p {
   text-decoration: none;
   color: #2e2f42;
   padding: 24px 0;
+  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-nav:hover,
@@ -125,6 +126,8 @@ p {
     ),
     url(../images/background-section-hero.jpg);
   padding: 188px 0;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .title {
