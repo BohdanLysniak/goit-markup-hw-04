@@ -89,7 +89,7 @@ p {
   position: relative;
   color: #404bbf;
 }
-.link-nav.current:active::after {
+.link-nav.current::after {
   content: '';
   position: absolute;
   left: 0;
@@ -129,6 +129,9 @@ p {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/background-section-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 188px 0;
   max-width: 1440px;
   margin: 0 auto;
@@ -199,10 +202,13 @@ p {
 }
 
 .icon-advantages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
   border-radius: 4px;
   border: 1px solid #8e8f99;
   background-color: #f4f4fd;
-  padding: 24px 100px;
   margin-bottom: 8px;
 }
 
@@ -233,14 +239,21 @@ p {
 .team-dsc {
   background-color: #ffffff;
   width: calc((100% - 72px) / 4);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
+}
+
+.social-link {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-dsc:hover .social-link {
+.social-link:hover,
+.social-link:focus .social-link {
   background-color: #404bbf;
 }
 
@@ -276,7 +289,6 @@ p {
   align-items: center;
   background-color: #4d5ae5;
   border-radius: 50%;
-  padding: 12px;
   width: 100%;
   height: 100%;
 }
@@ -303,6 +315,7 @@ p {
 
 .portfolio-items {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .image-portfolio {
@@ -318,7 +331,7 @@ p {
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 40px 32px 164px 32px;
+  padding: 40px 32px;
   background-color: #4d5ae5;
   color: #f4f4fd;
 }
@@ -333,11 +346,10 @@ p {
   border-top: none;
 }
 
-.portfolio-items:hover .portfolio-dsc {
+.portfolio-items:hover {
   border: 1px solid #f4f4fd;
-  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .product {
@@ -368,6 +380,11 @@ p {
 
 .box-footer {
   display: flex;
+  align-items: baseline;
+}
+
+.box-logo {
+  margin-right: 120px;
 }
 
 .logo-footer {
@@ -390,10 +407,6 @@ p {
 .footer-text {
   color: #f4f4fd;
   max-width: 264px;
-}
-
-.box-social {
-  margin-left: 120px;
 }
 
 .social-text {
@@ -429,6 +442,7 @@ p {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link-footer:hover {
+.social-link-footer:hover,
+.social-link-footer:focus {
   background-color: #31d0aa;
 }
